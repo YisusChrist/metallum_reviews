@@ -9,13 +9,12 @@ repository = "https://github.com/YisusChrist/metallum_reviews"
 
 [tool.poetry.dependencies]
 python = "^3.12"
-enmet = "^0.9.1"
-rich = "^13.7.1"
 beautifulsoup4 = "^4.12.3"
+enmet = "^0.9.1"
 fake-useragent = "^1.5.1"
-requests-cache = "^1.2.1"
-requests-pprint = "^1.0.1"
 pyfiglet = "^1.0.2"
+requests-cache = "^1.2.1"
+rich = "^13.7.1"
 
 [tool.poetry.scripts]
 metallum_reviews = "metallum_reviews.__main__:main"
