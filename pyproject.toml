@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "metallum_reviews"
+version = "0.1.0"
+description = "Search for reviews in Encyclopaedia Metallum"
+license = "GPL-3.0-only"
+authors = ["Alejandro González Momblán <agelrenorenardo@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/YisusChrist/metallum_reviews"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+enmet = "^0.9.1"
+rich = "^13.7.1"
+beautifulsoup4 = "^4.12.3"
+fake-useragent = "^1.5.1"
+requests-cache = "^1.2.1"
+requests-pprint = "^1.0.1"
+pyfiglet = "^1.0.2"
+
+[tool.poetry.scripts]
+metallum_reviews = "metallum_reviews.__main__:main"
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^3.2.6"
+mypy = "^1.11.1"
+pydoctest = "^0.1.22"
+bandit = "^1.7.9"
+
+[tool.pylint]
+disable = [
+   "W0622",  # Redefining built-in 'format' (redefined-builtin)
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
