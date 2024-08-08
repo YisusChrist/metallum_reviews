@@ -53,13 +53,16 @@
 
 Here's a breakdown of the packages needed and their versions:
 
--   [poetry](https://pypi.org/project/poetry) - 1.7.1 (_only for manual installation_)
--   [requests](https://pypi.org/project/requests) - 2.31.0
--   [rich-argparse-plus](https://pypi.org/project/rich-argparse-plus) - 0.3.1.4
--   [rich](https://pypi.org/project/rich) - 13.7.0
+-   [poetry](https://pypi.org/project/poetry) >= 1.7.1 (_only for manual installation_)
+-   [beautifulsoup4](https://pypi.org/project/beautifulsoup4) >= 4.12.3
+-   [enmet](https://pypi.org/project/enmet) >= 0.9.1
+-   [fake-useragent](https://pypi.org/project/fake-useragent) >= 1.5.1
+-   [pyfiglet](https://pypi.org/project/pyfiglet) >= 1.0.2
+-   [requests-cache](https://pypi.org/project/requests-cache) >= 1.2.1
+-   [rich](https://pypi.org/project/rich) >= 13.7.1
 
 > [!NOTE]
-> The software has been developed and tested using Python `3.12.1`. The minimum required version to run the software is Python 3.6. Although the software may work with previous versions, it is not guaranteed.
+> The software has been developed and tested using Python `3.12.4`. The minimum required version to run the software is Python 3.6. Although the software may work with previous versions, it is not guaranteed.
 
 ## Installation
 
