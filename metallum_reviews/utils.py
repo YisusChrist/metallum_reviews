@@ -8,6 +8,7 @@ from typing import Any
 import enmet  # type:ignore
 from bs4 import BeautifulSoup, ResultSet, Tag  # type:ignore
 from fake_useragent import FakeUserAgent  # type:ignore
+from pydantic_core import Url
 from requests import HTTPError, Response, Session  # type:ignore
 from requests_cache import CachedResponse, CachedSession, OriginalResponse
 from rich import print
@@ -89,7 +90,7 @@ def process_review(url: str, album: enmet.Album, review_html: Tag) -> Review:
 
     profile_menu = review_html.find("a", {"class": "profileMenu"})
     author: str = profile_menu.get_text(strip=True)
-    author_link: str = profile_menu["href"].strip()
+    author_link: Url = profile_menu["href"].strip()
     date: str = (
         profile_menu.next_sibling.get_text(separator=", ", strip=True)
         .split(", ", maxsplit=1)[1]
@@ -97,7 +98,7 @@ def process_review(url: str, album: enmet.Album, review_html: Tag) -> Review:
     )
 
     content: str = review_html.find("div", {"class": "reviewContent"}).text.strip()
-    review_url: str = f"{url}{author.replace(' ', '_')}"
+    review_url: Url = Url(f"{url}{author.replace(' ', '_')}")
 
     return Review(
         title=title,
@@ -162,7 +163,7 @@ def fetch_reviews(
                 # print(review.album)
                 print(review, end="")
                 # Send test request to the review URL to ensure it's valid
-                send_request(session, review.url)
+                send_request(session, str(review.url))
             reviews_list.extend(reviews)
             progress.update(task, advance=1)
             break

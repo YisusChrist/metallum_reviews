@@ -1,9 +1,10 @@
 """Models for the project."""
 
-from dataclasses import dataclass
 from datetime import datetime
 
 import enmet  # type:ignore
+from pydantic import Field, HttpUrl
+from pydantic.dataclasses import dataclass
 
 
 @dataclass
@@ -11,7 +12,7 @@ class User:
     """User class to represent a user on the site."""
 
     name: str
-    url: str
+    url: HttpUrl
 
     def __str__(self) -> str:
         return f"{self.name} ({self.url})"
@@ -20,17 +21,17 @@ class User:
         return f"<{self.__class__.__name__}: {self.__str__()}>"
 
 
-@dataclass
+@dataclass(config={"arbitrary_types_allowed": True})
 class Review:
     """Review class to represent a review on the site."""
 
     title: str
-    rating: int
     author: User
     date: datetime
     content: str
     album: enmet.Album
-    url: str
+    url: HttpUrl
+    rating: int = Field(..., ge=0, le=100)
 
     def full_info(self) -> str:
         """
