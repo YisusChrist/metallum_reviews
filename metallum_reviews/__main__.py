@@ -8,7 +8,6 @@ from typing import Any
 import enmet  # type:ignore
 import pyfiglet  # type: ignore
 from requests_cache import CachedSession
-
 from rich import print
 from rich.prompt import Prompt
 from rich.traceback import install
@@ -17,7 +16,7 @@ from metallum_reviews.consts import GITHUB, PACKAGE
 from metallum_reviews.consts import __desc__ as DESC
 from metallum_reviews.consts import __version__ as VERSION
 from metallum_reviews.models import Review
-from metallum_reviews.utils import fetch_reviews
+from metallum_reviews.utils import fetch_reviews, reviews_to_json
 
 
 def strip_rich_tags(text: str) -> str:
@@ -93,8 +92,9 @@ def main() -> None:
 
     session = CachedSession()
     reviews: list[Review] = fetch_reviews(session, results, total_results)
-    if reviews:
-        print(reviews[0].full_info())
+
+    # Save the reviews to a JSON file
+    reviews_to_json(reviews)
 
 
 if __name__ == "__main__":

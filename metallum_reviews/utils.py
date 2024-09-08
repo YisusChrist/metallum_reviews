@@ -1,5 +1,6 @@
 """Utility functions for fetching and processing reviews from Encyclopaedia Metallum."""
 
+import json
 import re
 import time
 from datetime import datetime
@@ -169,3 +170,26 @@ def fetch_reviews(
             break
 
     return reviews_list
+
+
+def reviews_to_json(reviews: list[Review]) -> None:
+    """
+    Convert the reviews to a JSON file.
+
+    Args:
+        reviews (list[Review]): The list of reviews to convert to JSON.
+    """
+    reviews_dict: dict = {}
+    for i, r in enumerate(reviews):
+        reviews_dict[i] = {
+            "title": r.title,
+            "rating": r.rating,
+            "author": r.author.name,
+            "date": r.date.isoformat(),
+            "album": r.album.name,
+            "url": str(r.url),
+            "content": r.content,
+        }
+
+    with open("reviews.json", "w") as file:
+        json.dump(reviews_dict, file, indent=4, ensure_ascii=False)
