@@ -14,7 +14,7 @@
     <a href="https://github.com/YisusChrist/metallum_reviews/pulls">
         <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/YisusChrist/metallum_reviews?color=0088ff">&nbsp;&nbsp;&nbsp;
     </a>
-    <a href="https://opensource.org/license/gpl-2-0/">
+    <a href="https://opensource.org/license/GPL-3.0">
         <img alt="License" src="https://img.shields.io/github/license/YisusChrist/metallum_reviews?color=0088ff">
     </a>
 </p>
@@ -241,7 +241,7 @@ Hallowed Be Thy Name
 
 ## License
 
-`metallum_reviews` is released under the [GPL-3.0 License](https://opensource.org/license/gpl-3-0).
+`metallum_reviews` is released under the [GPL-3.0 License](https://opensource.org/license/GPL-3.0).
 
 ## Credits
 
