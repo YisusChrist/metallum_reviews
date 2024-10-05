@@ -5,7 +5,7 @@
     <a href="https://github.com/YisusChrist/metallum_reviews/forks">
         <img src="https://img.shields.io/github/forks/YisusChrist/metallum_reviews?color=171b20&label=Forks%20%20&logo=git&labelColor=f1cf8a&logoColor=ffffff">&nbsp;&nbsp;&nbsp;
     </a>
-    <a href="https://github.com/YisusChrist/metallum_reviews/">
+    <a href="https://github.com/YisusChrist/metallum_reviews/stargazers">
         <img src="https://img.shields.io/github/stars/YisusChrist/metallum_reviews?color=171b20&label=Stargazers&logo=octicon-star&labelColor=70a5eb">&nbsp;&nbsp;&nbsp;
     </a>
     <a href="https://github.com/YisusChrist/metallum_reviews/actions">
@@ -38,14 +38,14 @@
 <details>
 <summary>Table of Contents</summary>
 
-- [Requirements](#requirements)
-- [Installation](#installation)
-  - [From PyPI](#from-pypi)
-  - [Manual installation](#manual-installation)
-  - [Uninstall](#uninstall)
-- [Usage](#usage)
-- [License](#license)
-- [Credits](#credits)
+-   [Requirements](#requirements)
+-   [Installation](#installation)
+    -   [From PyPI](#from-pypi)
+    -   [Manual installation](#manual-installation)
+    -   [Uninstall](#uninstall)
+-   [Usage](#usage)
+-   [License](#license)
+-   [Credits](#credits)
 
 </details>
 
