@@ -16,6 +16,7 @@ pydantic = "^2.8.2"
 pyfiglet = "^1.0.2"
 requests-cache = "^1.2.1"
 rich = "^13.7.1"
+core-helpers = {git = "https://github.com/YisusChrist/core_helpers"}
 
 [tool.poetry.scripts]
 metallum_reviews = "metallum_reviews.__main__:main"
