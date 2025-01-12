@@ -100,7 +100,7 @@ If you prefer to install the program manually, follow these steps:
 2. Install the package:
 
     ```bash
-    poetry install --only-main
+    poetry install --only main
     ```
 
 3. Run the program:
